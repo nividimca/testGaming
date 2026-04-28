@@ -20,6 +20,12 @@ Impact:
 
 Date: 2026-04-28
 Type: decision
+Topic: Workflow branch
+Summary: Creato branch `develop` come ramo di sviluppo. `main` va trattato come ramo protetto.
+Impact: Le modifiche ordinarie devono partire da `develop` o da branch dedicati e arrivare in `main` solo tramite merge reviewato.
+
+Date: 2026-04-28
+Type: decision
 Topic: Stack iniziale
 Summary: Confermato `Godot 4.x + GDScript` con target primario `Windows (Steam)` e mobile-readiness solo architetturale.
 Impact: Tutti i task tecnici e le future implementazioni devono restare coerenti con questa scelta.
