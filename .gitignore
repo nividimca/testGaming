@@ -1,1 +1,7 @@
 .DS_Store
+**/.DS_Store
+.godot/
+.import/
+export_credentials.cfg
+build/windows/*
+!build/windows/.gitkeep

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/systems/pattern_system/pattern_system.gd" id="1_obm0l"]
+
+[node name="PatternSystem" type="Node"]
+script = ExtResource("1_obm0l")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://src/scenes/main/main.gd" id="1_mh0iv"]
+[ext_resource type="PackedScene" path="res://src/entities/player/player.tscn" id="2_fajg8"]
+[ext_resource type="PackedScene" path="res://src/entities/boss/boss.tscn" id="3_ck6uv"]
+[ext_resource type="PackedScene" path="res://src/systems/pattern_system/pattern_system.tscn" id="4_2clda"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_mh0iv")
+
+[node name="Player" parent="." instance=ExtResource("2_fajg8")]
+position = Vector2(576, 560)
+
+[node name="Boss" parent="." instance=ExtResource("3_ck6uv")]
+position = Vector2(576, 120)
+
+[node name="PatternSystem" parent="." instance=ExtResource("4_2clda")]
