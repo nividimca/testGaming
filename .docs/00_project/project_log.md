@@ -18,6 +18,12 @@ Impact:
 
 ---
 
+Date: 2026-05-07
+Type: progress
+Topic: README iniziale del repository
+Summary: Aggiunto `README.md` con overview del progetto, stato attuale, istruzioni minime di avvio e dichiarazione esplicita che il workflow Codex copre l'intero repository e tutti i rami, non solo il branch corrente.
+Impact: Chi apre il repo ha ora un punto di ingresso unico e coerente che spiega rapidamente scopo, stack, fase corrente e perimetro operativo di Codex.
+
 Date: 2026-04-28
 Type: decision
 Topic: Stack iniziale
