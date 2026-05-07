@@ -20,6 +20,12 @@ Impact:
 
 Date: 2026-05-07
 Type: progress
+Topic: README iniziale del repository
+Summary: Aggiunto `README.md` con overview del progetto, stato attuale, istruzioni minime di avvio e dichiarazione esplicita che il workflow Codex copre l'intero repository e tutti i rami, non solo il branch corrente.
+Impact: Chi apre il repo ha ora un punto di ingresso unico e coerente che spiega rapidamente scopo, stack, fase corrente e perimetro operativo di Codex.
+
+Date: 2026-05-07
+Type: progress
 Topic: Prompt operativi salvati per chiusura Fase 3
 Summary: Creata la struttura `.docs/03_execution/prompts/fase_3/` con un prompt master (`00_master_prompt.md`) e tre sotto-prompt sequenziali per runtime dialoghi, trigger del tutorial boss e verifica/chiusura della Fase 3.
 Impact: Il lavoro residuo della Fase 3 puo' ora essere richiamato in modo compatto da un nuovo thread, mantenendo autonomia esecutiva, ordine dei task e allineamento alla DoD aggiornata.
