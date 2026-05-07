@@ -7,6 +7,8 @@ size = Vector2(82, 42)
 
 [node name="Boss" type="Area2D"]
 script = ExtResource("1_srr70")
+invincible_for_test = false
+respawn_on_defeat_for_test = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hxtbx")

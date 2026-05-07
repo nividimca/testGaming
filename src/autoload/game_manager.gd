@@ -30,6 +30,12 @@ func start_run() -> void:
 	set_state(RunState.PLAYING)
 
 
+func reset_run() -> void:
+	player_ref = null
+	boss_ref = null
+	set_state(RunState.BOOT)
+
+
 func register_player(player: Node) -> void:
 	player_ref = player
 

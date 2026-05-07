@@ -21,8 +21,11 @@ func _ready() -> void:
 
 
 func _draw() -> void:
-	var bullet_color := Color(1.0, 0.92, 0.35) if faction == "player" else Color(1.0, 0.45, 0.45)
-	draw_rect(Rect2(-4.0, -8.0, 8.0, 16.0), bullet_color, true)
+	if faction == "player":
+		_draw_player_bullet()
+		return
+
+	draw_rect(Rect2(-4.0, -8.0, 8.0, 16.0), Color(1.0, 0.45, 0.45), true)
 
 
 func _physics_process(delta: float) -> void:
@@ -58,3 +61,24 @@ func _queue_free_if_outside_viewport() -> void:
 		queue_free()
 	elif global_position.y > viewport_size.y + padding:
 		queue_free()
+
+
+func _draw_player_bullet() -> void:
+	var forward := direction
+	if forward == Vector2.ZERO:
+		forward = Vector2.UP
+
+	var right := forward.orthogonal().normalized()
+	var tail_center := -forward * 8.0
+	var tip := forward * 12.0
+
+	var bullet_points := PackedVector2Array([
+		tail_center - right * 4.0,
+		tail_center + right * 4.0,
+		forward * 4.0 + right * 2.5,
+		tip,
+		forward * 4.0 - right * 2.5,
+	])
+
+	draw_colored_polygon(bullet_points, Color(1.0, 0.95, 0.4))
+	draw_polyline(bullet_points + PackedVector2Array([bullet_points[0]]), Color(1.0, 1.0, 0.75), 1.5)

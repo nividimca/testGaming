@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BossDialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/data/dialogue/boss_dialogue_resource.gd" id="1_v0q6q"]
+
+[resource]
+script = ExtResource("1_v0q6q")
+opening = "Sei entrato qui per ridere o per farti spezzare?"
+pre_forced_death = "No. Questo primo colpo non e' per ucciderti. E' per insegnarti quanto pesa il black humor."
+phase_2_transition = "Guarda meglio. Il colore torna solo quando il mio controllo comincia a cedere."
+phase_3_transition = "Troppo tardi. Se crollo io, crolla anche il tono di questo mondo."
+final_line = "Hai vinto questo scambio. Ma il black humor non finisce con me."

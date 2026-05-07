@@ -32,3 +32,8 @@ Istruzioni per tutto il repository `/Users/mihai/testGaming`.
 - Non aggiungere feature fuori MVP se non richiesto esplicitamente.
 - Mantieni il focus su Windows-first con mobile-readiness solo architetturale.
 - Considera questo progetto come `Godot 4.x + GDScript`, non come browser game.
+- Tratta come regola di design persistente che ogni boss inizi con atmosfera cupa e che il mondo guadagni colore tra le fasi.
+- Quando progetti o implementi transizioni di fase dei boss, interpreta il guadagno di colore come segnale che il boss sta perdendo controllo, non come semplice power-up estetico.
+- Non aspettare una richiesta esplicita dell'utente per applicare questa regola ai boss futuri, salvo istruzioni contrarie documentate.
+- Tratta come regola di design persistente che ogni boss abbia quattro beat di dialogo: introduzione iniziale, transizione alla fase successiva, transizione alla fase finale, ed esclamazione finale di vittoria o chiusura.
+- Per il boss tutorial, prevedi inoltre un dialogo specifico immediatamente prima della morte forzata del player.

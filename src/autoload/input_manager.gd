@@ -2,12 +2,16 @@ extends Node
 
 var move_vector: Vector2 = Vector2.ZERO
 var fire_pressed: bool = false
+var confirm_pressed: bool = false
+var restart_pressed: bool = false
 var auto_fire_enabled: bool = true
 
 
 func _process(_delta: float) -> void:
 	move_vector = _read_move_vector()
 	fire_pressed = auto_fire_enabled or Input.is_key_pressed(KEY_SPACE) or _is_fire_action_pressed()
+	confirm_pressed = Input.is_key_pressed(KEY_ENTER) or Input.is_key_pressed(KEY_KP_ENTER)
+	restart_pressed = Input.is_key_pressed(KEY_R)
 
 
 func get_move_vector() -> Vector2:
@@ -16,6 +20,14 @@ func get_move_vector() -> Vector2:
 
 func is_fire_pressed() -> bool:
 	return fire_pressed
+
+
+func is_confirm_pressed() -> bool:
+	return confirm_pressed
+
+
+func is_restart_pressed() -> bool:
+	return restart_pressed
 
 
 func _read_move_vector() -> Vector2:

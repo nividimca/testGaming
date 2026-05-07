@@ -113,6 +113,7 @@ Responsabilita':
 - esistere come target principale della scena
 - ricevere danno dai bullet del player
 - notificare `GameManager` quando sconfitto
+- poter referenziare dati esterni minimi del boss, come i dialoghi, senza hardcodarli nella logica gameplay
 
 #### `Bullet`
 
@@ -128,6 +129,14 @@ Responsabilita':
 
 - gestire il rate di spawn dei bullet del boss
 - mantenere pattern facilmente sostituibili senza cambiare `Boss`
+
+#### `BossDialogueResource`
+
+Responsabilita':
+
+- contenere i beat di dialogo di un boss in forma data-driven
+- separare testo e struttura di dialogo dalla logica di combattimento
+- supportare il beat addizionale `pre_forced_death` del boss tutorial senza forzare sistemi narrativi piu' grandi
 
 ## Folder Structure
 
@@ -158,7 +167,33 @@ src/
     pattern_system/
       pattern_system.tscn
       pattern_system.gd
+  data/
+    dialogue/
+      boss_dialogue_resource.gd
+      bosses/
+        tutorial_boss_dialogue.tres
 ```
+
+## Dialogue Data
+
+Per i dialoghi dei boss il progetto adotta, da questo punto in poi, una struttura minima data-driven basata su `Resource`.
+
+Regole:
+
+- i dialoghi non vanno hardcodati in `boss.gd`, `main.gd` o `PatternSystem`
+- ogni boss puo' avere un file `.tres` dedicato sotto `src/data/dialogue/bosses/`
+- la struttura minima prevista per l'MVP e':
+  - `opening`
+  - `pre_forced_death`
+  - `phase_2_transition`
+  - `phase_3_transition`
+  - `final_line`
+
+Nota:
+
+- `pre_forced_death` e' usato dal boss tutorial
+- per i boss futuri puo' restare vuoto se non serve
+- questa scelta introduce solo il layer dati, non obbliga ancora a implementare un sistema dialoghi runtime completo
 
 ## Scene Composition
 
@@ -245,3 +280,18 @@ Nota: la generazione reale dell'eseguibile richiede Godot installato e export te
 - senza binario Godot installato nell'ambiente corrente non e' possibile validare qui l'avvio reale del progetto
 - il preset Windows puo' essere preparato, ma l'export effettivo dipende dai template locali
 - il loop MVP resta volutamente minimale e non copre bilanciamento o UX finale
+
+## Task — Boss Base
+
+Obiettivo:
+Implementare un boss che rappresenta il black humor
+
+Vincoli:
+
+* Non è un nemico generico
+* Deve avere comportamento attivo (pattern)
+
+Acceptance:
+
+* Il boss genera pressione sul player
+* Il boss non è passivo
