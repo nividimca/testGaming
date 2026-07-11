@@ -98,7 +98,7 @@ Gate fase:
 
 ## 7) Uso Multi-Tool (Regole Operative)
 
-- [ ] Fonte unica di verita' scelta (`docs/` repo o Notion)
+- [ ] Fonte unica di verita' scelta (`.docs/` repo o Notion)
 - [ ] Decisioni architetturali annotate in modo tracciabile
 - [ ] Prompt ricorrenti salvati come template
 - [ ] Ruoli tool separati:
@@ -108,4 +108,3 @@ Gate fase:
 
 Gate fase:
 - [ ] Nessuna decisione critica lasciata solo in chat
-

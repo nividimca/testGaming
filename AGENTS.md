@@ -1,6 +1,6 @@
 # AGENTS
 
-Istruzioni per tutto il repository `/Users/mihai/testGaming`.
+Istruzioni per tutto il repository locale del progetto.
 
 ## Regola prioritaria
 

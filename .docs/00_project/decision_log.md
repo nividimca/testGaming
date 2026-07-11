@@ -1,5 +1,12 @@
 # DECISION LOG
 
+Date: 2026-06-30
+Topic: Baseline del branch corrente
+Options: descrivere il progetto come gia' bootstrapato | descrivere solo cio' che esiste nel branch
+Decision: la documentazione del branch corrente deve riflettere solo i file e lo stato realmente presenti qui, trattando il repo come baseline documentale pronta al bootstrap tecnico.
+Why: evita drift tra documentazione e contenuto reale del branch.
+Impact: README, TDD, execution, QA e build process devono descrivere un progetto pianificato e pronto all'implementazione, non un runtime gia' committato.
+
 Date: 2026-04-27
 Topic: Scope
 Decision: Gioco breve 2–4h

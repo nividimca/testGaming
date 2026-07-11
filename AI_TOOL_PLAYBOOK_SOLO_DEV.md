@@ -119,11 +119,10 @@ Output minimo:
 - Non chiedere lo stesso compito a 3 AI diverse nello stesso momento.
 - Se ChatGPT propone una scelta tecnica, falla validare da Codex sul codice reale.
 - Se Codex propone scope troppo ampio, riportalo a MVP con KPI.
-- Ogni decisione finale va salvata in file (`docs/`), non solo in chat.
+- Ogni decisione finale va salvata in file (`.docs/`), non solo in chat.
 
 ## Default Rapido (Quando sei in dubbio)
 
 - Design e product thinking: **ChatGPT**
 - Codice, refactor, build, test, release automation: **Codex**
 - Copy store e comunicazione: **ChatGPT**
-
