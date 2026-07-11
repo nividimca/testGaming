@@ -18,7 +18,7 @@ Queste regole si applicano a:
 
 ## 3) Single Source of Truth
 
-- Fonte primaria: cartella `docs/` nel repo (oppure Notion, ma solo una).
+- Fonte primaria: cartella `.docs/` nel repo (oppure Notion, ma solo una).
 - Nessuna decisione e' valida finche' non e' salvata nella fonte primaria.
 - Le chat non sono documentazione ufficiale.
 
@@ -113,7 +113,8 @@ Nessuna implementazione fuori scope senza questo passaggio.
 
 ## 10) Convenzioni di Naming
 
-- Branch: `feature/<nome-breve>` o `fix/<nome-breve>`
+- Branch manuali: `feature/<nome-breve>` o `fix/<nome-breve>`
+- Branch creati da Codex: `codex/<nome-breve>`
 - Feature ID: `F-###`
 - Bug ID: `B-###`
 - Build: `major.minor.patch+build`
@@ -165,4 +166,3 @@ Prima di chiudere ogni settimana verifica:
 - [ ] Gate fase rispettati
 - [ ] Decision Log aggiornato
 - [ ] Prossime 5 priorita' definite
-

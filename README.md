@@ -1,89 +1,91 @@
-# testGaming
+# Dark Punchline
 
-`testGaming` e' un progetto game-dev in `Godot 4.x + GDScript` per un gioco arcade boss-based, con target primario `Windows` e mobile-readiness mantenuta solo a livello architetturale.
+`Dark Punchline` e' un progetto game-dev in `Godot 4.x + GDScript` per un gioco arcade boss-based, con target primario `Windows` e mobile-readiness mantenuta solo a livello architetturale.
 
 Il conflitto centrale del progetto e':
 
 **Player vs Black Humor**
 
-Il loop MVP attuale e' semplice:
+Il loop MVP di riferimento e':
 
 `muoviti -> schiva -> colpisci -> sopravvivi`
 
-## Cosa contiene oggi
+## Stato del branch corrente
 
-Il repository contiene:
+Questo branch e' la baseline documentale del progetto.
+
+Contiene:
 
 - documentazione di progetto in `.docs/`
-- bootstrap tecnico Godot del MVP
-- una vertical slice in corso centrata sul boss tutorial
-- struttura minima per dialoghi boss data-driven
+- regole operative e governance del workflow
+- backlog tecnico prioritizzato
+- piani di esecuzione, QA e release
 
-Lo scope MVP resta intenzionalmente stretto:
+Non contiene ancora un bootstrap Godot committato.
 
-- movimento
-- shooting
-- boss
-- pattern
+In pratica, su questo branch non sono ancora presenti:
+
+- `project.godot`
+- `src/`
+- `export_presets.cfg`
+- `build/windows/`
+
+Questa documentazione va quindi letta come fonte di verita' per preparare il bootstrap tecnico del progetto, non come descrizione di un runtime gia' tracciato nel repository.
 
 ## Stato del progetto
 
-La base tecnica del progetto e' gia' presente:
+Sul branch corrente risultano chiusi a livello documentale:
 
-- progetto `Godot 4.x` apribile da `project.godot`
-- autoload `GameManager` e `InputManager`
-- scena principale con `Player`, `Boss`, `Bullet` e `PatternSystem`
-- preset di export per build `Windows`
+- obiettivo, vincoli e priorita' di progetto
+- core loop, scope MVP e KPI
+- architettura tecnica prevista
+- backlog tecnico iniziale
+- piano operativo della prima settimana
+- template per playtest, bug log e build process
 
-La fase attuale e' la rifinitura della vertical slice del boss tutorial, con attenzione a:
+Il prossimo obiettivo operativo su questo branch e':
 
-- onboarding iniziale con morte forzata leggibile
-- boss a tre fasi
-- dialoghi runtime minimi del boss
-- HUD e stati di run verificabili
+- creare il bootstrap tecnico minimo in `Godot 4.x`
+- validare una prima build locale `Windows`
+- trasformare la documentazione in runtime giocabile senza uscire dall'MVP
 
 ## Progetto fatto con Codex
 
 Questo progetto e' sviluppato interamente con Codex.
 
-Questa regola non vale solo per il branch corrente: vale per l'intero repository e per tutti i rami, salvo eventuali eccezioni future dichiarate in modo esplicito nella documentazione del progetto.
-
 In pratica:
 
-- codice
 - documentazione
 - iterazioni operative
+- backlog
 - aggiornamenti di fase
+- futuro codice runtime
 
-sono prodotti e mantenuti dentro il workflow Codex del repository.
+sono mantenuti dentro il workflow Codex del repository, salvo eccezioni documentate in modo esplicito.
 
 ## Struttura utile
 
-- `project.godot`: entrypoint del progetto Godot
-- `src/`: scene, entity, sistemi e dati runtime
-- `.docs/`: charter, game design, documentazione tecnica, piani di fase e log
-- `build/windows/`: output previsto per export locale Windows
+- `.docs/`: charter, design, documentazione tecnica, execution, testing, release e mobile-readiness
+- `AGENTS.md`: regole operative persistenti del repository
+- `WORKFLOW_GOVERNANCE.md`: governance multi-tool e quality gates
+- `STEAM_WINDOWS_MOBILE_CHECKLIST.md`: checklist fasi/gate Windows-first
+- `AI_TOOL_PLAYBOOK_SOLO_DEV.md`: guida rapida all'uso dei tool AI nelle varie fasi
 
-## Avvio locale
+## Come usare questo branch
 
-Prerequisiti minimi:
-
-- `Godot 4.x`
-- export templates installati se vuoi verificare anche la build Windows
-
-Passi minimi:
-
-1. Apri `project.godot` in Godot.
-2. Verifica che la scena principale sia configurata correttamente.
-3. Esegui il progetto.
-
-Per l'export locale Windows, il riferimento operativo e' `.docs/05_release/build_process.md`.
+1. Parti da `.docs/00_project/project_charter.md` e `.docs/01_game_design/game_one_pager.md`.
+2. Usa `.docs/02_technical/technical_design_doc.md` e `.docs/02_technical/backlog_technical.md` come base del bootstrap tecnico.
+3. Segui `.docs/03_execution/week_01.md` per la sequenza operativa iniziale.
+4. Usa `.docs/05_release/build_process.md` e `.docs/04_testing/` per verificare build e QA appena il runtime esiste.
 
 ## Documenti di riferimento
 
 - `.docs/00_project/project_charter.md`
+- `.docs/00_project/project_log.md`
 - `.docs/01_game_design/game_one_pager.md`
 - `.docs/01_game_design/mvp_scope.md`
+- `.docs/01_game_design/kpi.md`
 - `.docs/02_technical/technical_design_doc.md`
-- `.docs/03_execution/phase_3_plan.md`
-- `.docs/00_project/project_log.md`
+- `.docs/02_technical/backlog_technical.md`
+- `.docs/03_execution/week_01.md`
+- `.docs/05_release/build_process.md`

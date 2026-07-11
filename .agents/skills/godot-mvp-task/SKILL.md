@@ -5,7 +5,7 @@ description: Use when the user wants Codex to implement, modify, or verify a con
 
 # Godot MVP Task
 
-Use this skill for implementation work in `/Users/mihai/testGaming`.
+Use this skill for implementation work in the local project workspace.
 
 ## Scope
 
